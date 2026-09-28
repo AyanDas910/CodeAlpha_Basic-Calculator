@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101322" />
+  <title>Nova — Smart Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Nova Calculator home"><span class="brand-mark">✦</span> NOVA<span class="brand-light">/CALC</span></a>
+      <div class="top-actions">
+        <button class="icon-btn" id="historyToggle" title="Toggle history" aria-label="Toggle history">◷</button>
+        <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">☼</button>
+      </div>
+    </header>
+
+    <section class="calculator-shell">
+      <div class="calculator">
+        <div class="eyebrow"><span class="status-dot"></span> SMART CALCULATOR <span class="mode-label" id="modeLabel">STANDARD</span></div>
+        <div class="display" aria-live="polite">
+          <div class="expression" id="expression">Ready when you are</div>
+          <div class="result-row"><span class="equals">=</span><output id="display" aria-label="Calculator display">0</output></div>
+        </div>
+
+        <div class="memory-row">
+          <button class="mini-key" data-action="mc">MC</button>
+          <button class="mini-key" data-action="mr">MR</button>
+          <button class="mini-key" data-action="mplus">M+</button>
+          <button class="mini-key" data-action="mminus">M−</button>
+          <button class="mini-key" data-action="ms">MS</button>
+        </div>
+
+        <div class="keys" id="keys">
+          <button class="key utility" data-action="clear">AC</button>
+          <button class="key utility" data-action="backspace" aria-label="Backspace">⌫</button>
+          <button class="key utility" data-action="percent">%</button>
+          <button class="key operator" data-value="÷">÷</button>
+
+          <button class="key" data-value="7">7</button>
+          <button class="key" data-value="8">8</button>
+          <button class="key" data-value="9">9</button>
+          <button class="key operator" data-value="×">×</button>
+
+          <button class="key" data-value="4">4</button>
+          <button class="key" data-value="5">5</button>
+          <button class="key" data-value="6">6</button>
+          <button class="key operator" data-value="−">−</button>
+
+          <button class="key" data-value="1">1</button>
+          <button class="key" data-value="2">2</button>
+          <button class="key" data-value="3">3</button>
+          <button class="key operator" data-value="+">+</button>
+
+          <button class="key utility" data-action="sign">±</button>
+          <button class="key" data-value="0">0</button>
+          <button class="key" data-action="decimal">.</button>
+          <button class="key equals-key" data-action="equals">=</button>
+        </div>
+
+        <div class="extras">
+          <button class="extra-key" data-action="sqrt"><span>√x</span><small>Square root</small></button>
+          <button class="extra-key" data-action="square"><span>x²</span><small>Square</small></button>
+          <button class="extra-key" data-action="reciprocal"><span>1/x</span><small>Reciprocal</small></button>
+          <button class="extra-key" data-action="pi"><span>π</span><small>Pi</small></button>
+        </div>
+        <footer class="calc-footer"><span><kbd>Enter</kbd> calculate</span><span><kbd>Esc</kbd> clear</span><span>Made for your flow <b>✦</b></span></footer>
+      </div>
+
+      <aside class="history-panel" id="historyPanel">
+        <div class="history-heading"><div><span class="eyebrow">YOUR WORKSPACE</span><h2>History</h2></div><button id="clearHistory" class="text-btn">Clear all</button></div>
+        <div class="history-list" id="historyList"><div class="empty-history"><span>◷</span><p>Your calculations will appear here.</p></div></div>
+        <div class="history-tip">Tip: click any result to use it again.</div>
+      </aside>
+    </section>
+    <p class="bottom-note">A little math magic, right at your fingertips.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
